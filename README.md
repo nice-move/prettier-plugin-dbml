@@ -36,6 +36,13 @@ npm install prettier-plugin-dbml --save-dev
 prettier --write *.dbml
 ```
 
+# Known Issues
+
+- Project Definition will be removed, see: https://github.com/holistics/dbml/issues/285
+- Triple single quote ''' pairs became one quote ' pairs
+- All fields will be wrapped in double quotes
+- Comments will be removed
+
 ## Related
 
 - [@nice-move/prettier-config](https://github.com/nice-move/nice-move/tree/master/packages/prettier-config)
