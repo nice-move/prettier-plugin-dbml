@@ -1,0 +1,62 @@
+{
+  "name": "prettier-plugin-dbml",
+  "version": "0.0.0",
+  "description": "A Prettier plugin for DBML",
+  "license": "MIT",
+  "author": {
+    "name": "Eric Chen",
+    "email": "airkro@qq.com"
+  },
+  "keywords": [
+    "database",
+    "dbml",
+    "prettier",
+    "prettier-plugin",
+    "schema",
+    "sql"
+  ],
+  "homepage": "https://github.com/nice-move/prettier-plugin-dbml",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nice-move/prettier-plugin-dbml.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nice-move/prettier-plugin-dbml/issues"
+  },
+  "main": "index.cjs",
+  "files": [],
+  "scripts": {
+    "lint:staged": "nice-move lint staged",
+    "prepare": "nice-move git hooks",
+    "prepublishOnly": "npm run lint:staged && npm test",
+    "test": "ava --fail-fast"
+  },
+  "dependencies": {
+    "@dbml/core": "^2.4.2"
+  },
+  "devDependencies": {
+    "@bring-it/npm": "^0.1.0",
+    "@nice-move/cli": "^0.9.8",
+    "@nice-move/eslint-config-base": "^0.8.8",
+    "@nice-move/prettier-config": "^0.7.2",
+    "ava": "^4.3.3",
+    "eslint": "^8.23.0",
+    "eslint-plugin-ava": "^13.2.0",
+    "garou": "^0.5.0",
+    "prettier": "^2.7.1"
+  },
+  "peerDependencies": {
+    "prettier": "^2.7.1"
+  },
+  "engines": {
+    "node": "^16.13.0 || >=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "eslintConfig": {
+    "extends": "@nice-move/eslint-config-base"
+  },
+  "prettier": "@nice-move/prettier-config"
+}
