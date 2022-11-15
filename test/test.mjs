@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-unresolved
 import test from 'ava';
 import prettier from 'prettier';
 
@@ -10,10 +9,19 @@ function pretty(string, options) {
 }
 
 const source = `
+Project project_name {
+  database_type: 'PostgreSQL'
+  Note: 'Description of the project'
+}
+
  Table   buildings   {
     address  varchar(255)  [unique,     not null,note:'to include unit number']
 
   id  integer [  pk,  unique, default:123 ]
+}
+
+Enum aas {
+  n [note: 'sds']
 }
 `;
 
