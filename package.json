@@ -1,6 +1,6 @@
 {
   "name": "prettier-plugin-dbml",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A Prettier plugin for DBML",
   "license": "MIT",
   "author": {
@@ -29,27 +29,28 @@
     "lint:staged": "nice-move lint staged",
     "prepare": "nice-move git hooks",
     "prepublishOnly": "npm run lint:staged && npm test",
-    "test": "ava --fail-fast"
+    "test": "ava --fail-fast",
+    "test:watch": "ava --fail-fast -w -u"
   },
   "dependencies": {
-    "@dbml/core": "^2.4.4"
+    "@dbml/core": "^2.5.3"
   },
   "devDependencies": {
-    "@bring-it/npm": "^0.1.0",
-    "@nice-move/cli": "^0.10.1",
-    "@nice-move/eslint-config-base": "^0.9.1",
-    "@nice-move/prettier-config": "^0.8.0",
-    "ava": "^5.0.1",
-    "eslint": "^8.27.0",
-    "eslint-plugin-ava": "^13.2.0",
-    "garou": "^0.5.2",
-    "prettier": "^2.7.1"
+    "@bring-it/npm": "^0.2.10",
+    "@nice-move/cli": "^0.10.10",
+    "@nice-move/eslint-config-base": "^0.9.16",
+    "@nice-move/prettier-config": "^0.8.2",
+    "ava": "^5.3.1",
+    "eslint": "^8.44.0",
+    "eslint-plugin-ava": "^14.0.0",
+    "garou": "^0.6.11",
+    "prettier": "^2.8.8"
   },
   "peerDependencies": {
-    "prettier": "^2.7.1"
+    "prettier": "^2.8.8"
   },
   "engines": {
-    "node": "^16.13.0 || >=18.0.0"
+    "node": ">=18.0.0 || ^16.13.0"
   },
   "publishConfig": {
     "access": "public",

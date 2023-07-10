@@ -18,10 +18,19 @@ Project project_name {
     address  varchar(255)  [unique,     not null,note:'to include unit number']
 
   id  integer [  pk,  unique, default:123 ]
+
+  Note: '''
+  This is a block string
+  This string can spans over multiple lines.
+'''
 }
 
+// example
+
+
+
 Enum aas {
-  n [note: 'sds']
+  n [note: "sds"]
 }
 `;
 

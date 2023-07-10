@@ -1,6 +1,6 @@
 'use strict';
 
-const { importer } = require('@dbml/core');
+const { Parser, ModelExporter } = require('@dbml/core');
 
 const name = 'dbml';
 
@@ -17,7 +17,7 @@ module.exports = {
   parsers: {
     [name]: {
       astFormat: name,
-      parse: (data) => data,
+      parse: (data) => Parser.parse(data, 'dbml'),
     },
   },
   printers: {
@@ -25,7 +25,7 @@ module.exports = {
       print: (path) => {
         const ast = path.getValue();
 
-        return importer.import(ast, 'dbml');
+        return ModelExporter.export(ast, 'dbml', false);
       },
     },
   },
