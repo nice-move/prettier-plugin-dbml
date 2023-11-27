@@ -17,7 +17,7 @@ module.exports = {
   parsers: {
     [name]: {
       astFormat: name,
-      parse: (data) => Parser.parse(data, 'dbml'),
+      parse: (data) => new Parser().parse(data, 'dbmlv2'),
     },
   },
   printers: {
@@ -25,7 +25,9 @@ module.exports = {
       print: (path) => {
         const ast = path.getValue();
 
-        return ModelExporter.export(ast, 'dbml', false);
+        const output = ModelExporter.export(ast, 'dbml', false);
+
+        return output.replaceAll(/Note:\s'([\S\s]+)'/g, "Note: '''$1'''");
       },
     },
   },

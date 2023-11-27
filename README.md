@@ -39,7 +39,7 @@ prettier --write *.dbml
 # Known Issues
 
 - Project Definition will be removed, see: https://github.com/holistics/dbml/issues/285
-- Triple single quote ''' pairs became one quote ' pairs
+- All String can't include single quotes
 - All fields will be wrapped in double quotes
 - Comments will be removed
 
