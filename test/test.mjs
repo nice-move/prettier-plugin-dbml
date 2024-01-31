@@ -1,6 +1,7 @@
 import test from 'ava';
 import { format } from 'prettier';
 import prettier from 'prettier-2';
+
 import plugin from '../index.cjs';
 
 async function pretty(t, string, options) {
@@ -35,11 +36,11 @@ Project project_name {
 }
 
  Table   buildings   {
-    address  varchar(255)  [unique,     not null,note:'to include "unit" number']
+    address  varchar(255)  [unique,     not null,note:"to include \\"unit\\" number"]
 
   id  integer [  pk,  unique, default:123 ]
 
-port integer [note:dsdsds]
+port integer [note:"dsdsds"]
 
   Note: '''
   This is a block string
