@@ -25,9 +25,7 @@ module.exports = {
       print: (path) => {
         const ast = path.getValue();
 
-        const output = ModelExporter.export(ast, 'dbml', false);
-
-        return output.replaceAll(/Note:\s'([\S\s]+)'/g, "Note: '''$1'''");
+        return ModelExporter.export(ast, 'dbml', false);
       },
     },
   },

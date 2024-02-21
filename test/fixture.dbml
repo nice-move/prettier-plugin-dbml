@@ -1,0 +1,25 @@
+Project project_name {
+  database_type: 'PostgreSQL'
+  Note: 'Description of the project'
+}
+
+ Table   buildings   {
+    address  varchar(255)  [unique,     not null,note:"to include \"unit\" number"]
+
+  id  integer [  pk,  unique, default:123 ]
+
+port integer [note:"dsdsds"]
+
+  Note: '''
+  This is a block string
+  This string can spans over multiple lines.
+'''
+}
+
+// example
+
+
+
+Enum aas {
+  n [note: "sds"]
+}

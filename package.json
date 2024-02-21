@@ -1,6 +1,6 @@
 {
   "name": "prettier-plugin-dbml",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A Prettier plugin for DBML",
   "license": "MIT",
   "author": {
@@ -33,7 +33,7 @@
     "test": "ava --fail-fast"
   },
   "dependencies": {
-    "@dbml/core": "^3.1.2"
+    "@dbml/core": "^3.1.8-alpha.0"
   },
   "devDependencies": {
     "@bring-it/npm": "^0.5.1",
@@ -43,12 +43,11 @@
     "ava": "^6.1.1",
     "eslint": "^8.56.0",
     "eslint-plugin-ava": "^14.0.0",
-    "garou": "^0.6.23",
-    "prettier": "^3.2.4",
-    "prettier-2": "npm:prettier@2.8.8"
+    "garou": "^0.7.0",
+    "prettier": "^3.2.5"
   },
   "peerDependencies": {
-    "prettier": "^2.8.8 || ^3.0.0"
+    "prettier": "^3.2.5"
   },
   "engines": {
     "node": ">=18.0.0 || ^16.15.0"
