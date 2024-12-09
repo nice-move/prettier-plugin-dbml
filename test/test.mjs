@@ -3,9 +3,9 @@ import { readFile } from 'node:fs/promises';
 import test from 'ava';
 import { format } from 'prettier';
 
-import plugin from '../index.cjs';
+import * as plugin from '../index.mjs';
 
-const path = new URL('fixture.dbml', import.meta.url);
+const path = new URL('./fixture.dbml', import.meta.url);
 
 const source = await readFile(path, 'utf8');
 
@@ -16,7 +16,7 @@ async function pretty(t, string, options) {
 
   const result2 = await func1(result1);
 
-  t.snapshot(result2, 'prettier 3');
+  t.snapshot(result2, 'prettier');
 
   t.is(result2, result1);
 }

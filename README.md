@@ -1,6 +1,6 @@
 # prettier-plugin-dbml
 
-A [Prettier] plugin for [DBML].
+A [prettier] plugin for [DBML].
 
 [prettier]: https://prettier.io/
 [dbml]: https://www.dbml.org/
