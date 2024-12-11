@@ -7,7 +7,7 @@ Project project_name {
     address  varchar(255)  [unique,     not null,note:"to include \"unit\" number"]
 
   id  integer [  pk,  unique, default:123 ]
-
+                parentId integer
 port integer [note:"dsdsds"]
 
   Note: '''
@@ -18,7 +18,7 @@ port integer [note:"dsdsds"]
 
 // example
 
-
+Ref:buildings.id < buildings.parentId
 
 Enum aas {
   n [note: "sds"]

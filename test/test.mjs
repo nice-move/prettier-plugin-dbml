@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises';
 import test from 'ava';
 import { format } from 'prettier';
 
-import * as plugin from '../index.mjs';
+import * as plugin from '../dist/index.mjs';
 
 const path = new URL('./fixture.dbml', import.meta.url);
 

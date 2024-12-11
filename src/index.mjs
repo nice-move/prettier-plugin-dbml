@@ -24,7 +24,9 @@ export const printers = {
     print: (path) => {
       const ast = path.getValue();
 
-      return ModelExporter.export(ast, 'dbml', false);
+      return ModelExporter.export(ast, 'dbml', false)
+        .replaceAll(/"(\w+)"/g, '$1')
+        .replaceAll(/(\n)Ref:(\S)/g, '$1Ref: $2');
     },
   },
 };

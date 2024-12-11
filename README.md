@@ -40,7 +40,6 @@ prettier --write *.dbml
 
 - Project Definition will be removed, see: https://github.com/holistics/dbml/issues/285
 - All String can't include single quotes
-- All fields will be wrapped in double quotes
 - Comments will be removed
 
 ## Related
