@@ -15,15 +15,6 @@ A [prettier] plugin for [DBML].
 [github-badge]: https://img.shields.io/npm/l/prettier-plugin-dbml.svg?style=flat-square&colorB=blue&logo=github
 [node-badge]: https://img.shields.io/node/v/prettier-plugin-dbml.svg?style=flat-square&colorB=green&logo=node.js
 
-## Examples
-
-```dbml
-Table buildings {
-  address varchar(255) [unique, not null, note: 'to include unit number']
-  id integer [ pk, unique, default: 123 ]
-}
-```
-
 ## Installation
 
 ```bash
@@ -38,9 +29,10 @@ prettier --write *.dbml
 
 # Known Issues
 
-- Project Definition will be removed, see: https://github.com/holistics/dbml/issues/285
 - All String can't include single quotes
+- Table alias will be transformed to Table name
 - Comments will be removed
+- See: https://github.com/holistics/dbml/issues/285
 
 ## Related
 

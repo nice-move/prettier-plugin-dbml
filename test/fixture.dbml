@@ -1,14 +1,21 @@
+
 Project project_name {
   database_type: 'PostgreSQL'
   Note: 'Description of the project'
 }
 
- Table   buildings   {
+ Table   core.buildings as U   [headercolor: #3498DB] {
     address  varchar(255)  [unique,     not null,note:"to include \"unit\" number"]
 
-  id  integer [  pk,  unique, default:123 ]
+  id  "integer" [  pk,  unique, default:123 ]
                 parentId integer
 port integer [note:"dsdsds"]
+
+  indexes {
+    id [pk] // composite primary key
+    port
+  }
+
 
   Note: '''
   This is a block string
@@ -18,8 +25,18 @@ port integer [note:"dsdsds"]
 
 // example
 
-Ref:buildings.id < buildings.parentId
+Ref:U.id < U.parentId
 
 Enum aas {
   n [note: "sds"]
+}
+
+TableGroup e_commerce {
+  core.buildings
+
+  Note: 'xxxxx'
+}
+
+Note single_line_note {
+  'This is a single line note'
 }
