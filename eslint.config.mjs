@@ -1,8 +1,3 @@
-import base from '@nice-move/all-in-base';
+import base from '@nice-move/all-in-base/eslint';
 
-export default [
-  ...base,
-  {
-    ignores: ['src/**'],
-  },
-];
+export default [...base];
