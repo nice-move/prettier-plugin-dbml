@@ -23,8 +23,7 @@ jobs:
 
     runs-on: ${{ matrix.os }}
     steps:
-      - name: Run
-        uses: airkro/bring-it@actions-oidc
+      - uses: airkro/bring-it@actions-oidc
         with:
           node-version: ${{ matrix.node }}
 
@@ -34,5 +33,4 @@ jobs:
     permissions:
       id-token: write
     steps:
-      - name: Run
-        uses: airkro/bring-it@actions-oidc
+      - uses: airkro/bring-it@actions-oidc
