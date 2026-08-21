@@ -1,6 +1,6 @@
 {
   "name": "prettier-plugin-dbml",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "A `prettier` plugin for DBML",
   "license": "MIT",
   "author": {

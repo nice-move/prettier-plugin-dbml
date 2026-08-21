@@ -27,6 +27,10 @@ port integer [note:"dsdsds"]
 
 Ref:U.id < U.parentId
 
+Ref {
+  U.port > U.id
+}
+
 Enum aas {
   n [note: "sds"]
 }

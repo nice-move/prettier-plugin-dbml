@@ -27,11 +27,29 @@ npm install prettier-plugin-dbml --save-dev
 prettier --write *.dbml
 ```
 
-# Known Issues
+## Known Issues
 
-- Table alias will be transformed to Table name
-- Comments will be removed
-- See: https://github.com/holistics/dbml/issues/285
+- Comments will be removed.
+
+## Compatibility Workarounds
+
+The DBML parser and exporter currently have a few limitations that require
+small workarounds in this plugin:
+
+- `@dbml/core` resolves table aliases to their original table names when
+  exporting references. The plugin post-processes `Ref` lines to restore the
+  aliases without modifying the parsed AST, which could otherwise affect the
+  table declarations themselves.
+- `ModelExporter` does not include the top-level `Project` block in its DBML
+  output. The plugin rebuilds it from the project name, database type, and
+  note stored in the AST.
+- `ModelExporter` emits quoted identifiers and may omit the space after
+  `Ref:`. The plugin removes quotes around identifiers while preserving quoted
+  string values, and normalizes `Ref:` spacing to keep the output consistent
+  with regular DBML syntax.
+- Line comments are discarded by the DBML parser and are therefore not
+  available in the AST. They cannot be restored by the plugin and are removed
+  during formatting.
 
 ## Related
 

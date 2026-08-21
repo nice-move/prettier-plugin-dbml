@@ -16,14 +16,32 @@ test('createProject', (t) => {
 test('normalize', (t) => {
   t.snapshot(
     normalize(
-      `Table t {\n  "column" "integer" [note: 'keep "quoted" text']\n}`,
+      `
+Table t {
+  "column" "integer" [note: 'keep "quoted" text']
+}
+    `.trim(),
     ),
   );
 });
 
 test('ast2dbml', (t) => {
   const ast = new Parser().parse(
-    `Project project_name {\n  database_type: 'PostgreSQL'\n}\n\nTable t {\n  "column" "integer" [note: 'keep "quoted" text']\n}`,
+    `
+      Project project_name {
+        database_type: 'PostgreSQL'
+      }
+
+      Table t as T {
+        "column" "integer" [note: 'keep "quoted" text']
+      }
+
+      Table u {
+        "column" "integer"
+      }
+
+      Ref: T.column < u.column
+    `.trim(),
     'dbmlv2',
   );
 

@@ -3,3 +3,5 @@ configDependencies:
 
 trustPolicyExclude:
   - semver@6.3.1
+
+shamefullyHoist: true
