@@ -29,7 +29,6 @@ prettier --write *.dbml
 
 # Known Issues
 
-- All String can't include single quotes
 - Table alias will be transformed to Table name
 - Comments will be removed
 - See: https://github.com/holistics/dbml/issues/285

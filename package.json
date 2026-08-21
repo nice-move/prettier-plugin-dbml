@@ -1,6 +1,6 @@
 {
   "name": "prettier-plugin-dbml",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "A `prettier` plugin for DBML",
   "license": "MIT",
   "author": {
@@ -23,10 +23,12 @@
     "url": "https://github.com/nice-move/prettier-plugin-dbml/issues"
   },
   "main": "lib/index.mjs",
-  "files": [],
+  "files": [
+    "lib"
+  ],
   "type": "module",
   "scripts": {
-    "lint:eslint": "eslint . --quiet --fix --concurrency=auto",
+    "lint:eslint": "eslint . --quiet --fix",
     "lint:staged": "nice-move lint staged",
     "lint:type": "tsc -p tsconfig.json",
     "prepare": "nice-move git hooks",
@@ -35,22 +37,22 @@
     "test": "ava --fail-fast"
   },
   "dependencies": {
-    "@dbml/core": "^6.4.0"
+    "@dbml/core": "^10.1.1"
   },
   "devDependencies": {
-    "@bring-it/cli": "^0.11.1",
-    "@bring-it/npm": "^0.9.3",
-    "@nice-move/all-in-base": "^0.6.41",
-    "ava": "^7.0.0",
-    "eslint": "^9.39.4",
-    "garou": "^0.9.17",
-    "prettier": "~3.8.1",
-    "typescript": "~5.9.3"
+    "@bring-it/cli": "^0.11.3",
+    "@bring-it/npm": "^0.9.6",
+    "@nice-move/all-in-base": "^0.8.12",
+    "ava": "^8.0.1",
+    "eslint": "^9.39.5",
+    "garou": "^0.9.21",
+    "prettier": "~3.9.6",
+    "typescript": "~6.0.3"
   },
   "peerDependencies": {
-    "prettier": "^3.8.1"
+    "prettier": "^3.9.6"
   },
-  "packageManager": "pnpm@10.32.1",
+  "packageManager": "pnpm@10.34.5",
   "engines": {
     "node": ">=20.0.0",
     "pnpm": "^10.30.0"
@@ -63,8 +65,7 @@
     "extensions": [
       "mts",
       "mjs"
-    ],
-    "workerThreads": false
+    ]
   },
   "prettier": "@nice-move/prettier-config"
 }
